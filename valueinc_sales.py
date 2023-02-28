@@ -5,7 +5,6 @@ Created on Wed Feb 15 20:36:06 2023
 
 @author: agnieszka
 """
-
 import pandas as pd
 
 data = pd.read_csv('transaction.csv', sep=';')
@@ -53,3 +52,5 @@ data = data.drop('ClientKeywords',axis=1)
 data = data.drop('Year',axis=1)
 data = data.drop('Day',axis=1)
 data = data.drop('Month',axis=1)
+
+data.to_csv('ValueInc_Cleaned.csv', index=False)
